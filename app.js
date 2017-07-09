@@ -141,11 +141,6 @@ app.get('/vendas', function(req,res){
   });
 })
 
-// app.get('/favicon.ico', function(req, res) {
-//     res.send(204);
-// });
-
-
 //app.listen(8080);
 
   var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
