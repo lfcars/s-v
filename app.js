@@ -1,12 +1,10 @@
 var express = require('express');
-//var path = require('path');
-var path = require('path');
-var mongoose = require('mongoose');
-var Venda = require('./venda.model.js');
 var bodyParser = require('body-parser');
-var favicon = require('serve-favicon');
-
+var mongoose = require('mongoose');
 var exphbs = require('express-handlebars')
+var Venda = require('./venda.model.js');
+var path = require('path');
+var favicon = require('serve-favicon');
 
 //mongoose
 //var myDB = 'mongodb://localhost/example';
@@ -16,9 +14,7 @@ var myDB = 'mongodb://sak:gestSAK1234@ds153422.mlab.com:53422/sak-vouchers';
 
 mongoose.connect(myDB);
 
-
 var app = express();
-app.use(express.static('public'));
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
@@ -150,3 +146,5 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
   app.listen(server_port, server_ip_address, function(){
     console.log("Listening on " + server_ip_address + ", server_port " + server_port)
   });
+
+  app.use(express.static('public'));
