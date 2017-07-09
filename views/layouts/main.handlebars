@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <title>SAK Vouchers</title>
+
+      <link rel="shortcut icon" href="static/images/favicon.ico">
+
+      <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+      </style>
+
+      <script>
+        $(document).ready(function() {
+           $("#day").val(new Date().toDateString());
+           $("#time").val(new Date().toTimeString().substring(0,5));
+        });
+      </script>
+
+
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+</html>

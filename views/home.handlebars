@@ -1,0 +1,62 @@
+<h1>SAK</h1>
+<h2>Voucher sales</h2>
+
+<form action="/" method="POST">
+  <table>
+    <tr>
+      <td>Store:</td>
+      <td><input type="text" name="store"></td>
+    </tr>
+    <tr>
+      <td>Voucher ID:</td>
+      <td><input type="text" name="voucherID"></td>
+    </tr>
+    <tr>
+      <td>Sale Document Number:</td>
+      <td><input type="text" name="docNumber"></td>
+    </tr>
+    <tr>
+      <td>Product:</td>
+      <td><input type="text" name="product"></td>
+    </tr>
+    <tr>
+      <td>Price:</td>
+      <td><input type="text" name="price"></td>
+    </tr>
+    <tr>
+      <td>Day:</td>
+      <td><input id="day" type="text" name="day"></td>
+    </tr>
+    <tr>
+      <td>Time:</td>
+      <td><input id="time" type="time" name="time"></td>
+    </tr>
+
+  </table>
+
+<input type="submit">
+</form>
+
+<h1>Previous sales</h1>
+<h2></h2>
+
+<table>
+  <tr>
+    <th>Store</th>
+    <th>Product</th>
+    <th>Voucher</th>
+    <th>Document</th>
+    <th>Day</th>
+    <th>Time</th>
+  </tr>
+  {{#each vendas}}
+    <tr>
+      <td>{{this.store}}</td>
+      <td>{{this.product}}</td>
+      <td>{{this.voucherID}}</td>
+      <td>{{this.docNumber}}</td>
+      <td>{{this.day}}</td>
+      <td>{{this.time}}</td>
+    </tr>
+  {{/each}}
+</table>
